@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Anniversary 💗</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(180deg, #FDECEF, #FFD6E0);
+      text-align: center;
+      color: #444;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 48px;
+      color: #E75480;
+      margin-top: 40px;
+    }
+
+    .date {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 12px;
+    }
+
+    .message {
+      padding: 20px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -10px;
+      color: #ff6b81;
+      animation: floatUp 6s linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% {transform: translateY(0) scale(1); opacity: 1;}
+      100% {transform: translateY(-100vh) scale(1.5); opacity: 0;}
+    }
+
+    .footer {
+      margin: 30px 0;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Happy Anniversary 💗</h1>
+  <div class="date">02.04.2023 – 02.04.2026</div>
+
+  <div class="card">
+    <iframe src="https://www.canva.com/design/DAHFk6adN2s/btzylImMIfH_Jsr2w2SH7A/view?embed"></iframe>
+  </div>
+
+  <div class="card message">
+    Hi vợ em bé của anh 💕<br><br>
+    3 năm qua anh ngày càng thương em nhiều hơn...<br>
+    Cảm ơn em bé vì luôn ở bên anh ❤️<br><br>
+    Anh sẽ cố gắng để mang đến cho em những điều tốt đẹp nhất 💖<br><br>
+    Thương vợ em bé rất nhiều 💋
+  </div>
+
+  <div class="footer">
+    #HappyAnniversary3Years 💗
+  </div>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "💗";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+      heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+  <audio id="bg-music" autoplay loop>
+  <source src="music/Yêu Em Hơn Mỗi Ngày  Andiez  Official MV - Andiez Official (youtube).mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="playMusic()" 
+style="position:fixed;bottom:20px;right:20px;
+background:#E75480;color:white;border:none;
+padding:12px 16px;border-radius:50px;
+font-size:14px;cursor:pointer;">
+💗 Bật nhạc
+</button>
+
+<script>
+  const music = document.getElementById("bg-music");
+
+  function playMusic() {
+    music.play();
+  }
+
+  // Thử autoplay (nếu trình duyệt cho phép)
+  window.addEventListener("load", () => {
+    music.play().catch(() => {
+      console.log("Autoplay bị chặn, cần bấm nút");
+    });
+  });
+</script>
+
+</body>
+</html>
